@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<center>
+<h1>Kalkulator</h1>
+<head>
+<script>
+		function hanyaAngka(evt) {
+		
+				var charCode = (evt.which) ? evt.which : event.keyCode
+				if (charCode > 31 && (charCode < 48 || charCode > 57))
+            
+				return false;
+				return true;
+		}
+		
+		
+    </script>
+	<script>
+	function tambah(){
+		 var a = parseFloat(document.getElementById('a').value);
+         var b = parseFloat(document.getElementById('b').value);
+		 var c = parseFloat(document.getElementById('c').value);
+		 var d = document.getElementById('a1');
+		 var e = document.getElementById('b1');
+		 var f = document.getElementById('c1');
+		 
+		 
+			if(d.checked === true && e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a+b+c;
+		 
+			}
+			else if(d.checked === true && e.checked)
+			{
+		 
+			document.getElementById('hasil').value = a+b;
+		 
+			}
+			else if(d.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a+c;
+		 
+			}
+			else if(e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = b+c;
+		 
+			}
+			else
+			{
+			alert("tidak bisa menjumlahkan");
+			}
+			
+		}
+		function kurang(){
+		 var a = parseFloat(document.getElementById('a').value);
+         var b = parseFloat(document.getElementById('b').value);
+		 var c = parseFloat(document.getElementById('c').value);
+		 var d = document.getElementById('a1');
+		 var e = document.getElementById('b1');
+		 var f = document.getElementById('c1');
+		 
+		 
+			if(d.checked === true && e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a-b-c;
+		 
+			}
+			else if(d.checked === true && e.checked)
+			{
+		 
+			document.getElementById('hasil').value = a-b;
+		 
+			}
+			else if(d.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a-c;
+		 
+			}
+			else if(e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = b-c;
+		 
+			}
+			else
+			{
+			alert("tidak bisa melakukan pengurangan");
+			}
+			
+		}
+		function bagi(){
+		 var a = parseFloat(document.getElementById('a').value);
+         var b = parseFloat(document.getElementById('b').value);
+		 var c = parseFloat(document.getElementById('c').value);
+		 var d = document.getElementById('a1');
+		 var e = document.getElementById('b1');
+		 var f = document.getElementById('c1');
+		 
+		 
+			if(d.checked === true && e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a/b/c;
+		 
+			}
+			else if(d.checked === true && e.checked)
+			{
+		 
+			document.getElementById('hasil').value = a/b;
+		 
+			}
+			else if(d.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a/c;
+		 
+			}
+			else if(e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = b/c;
+		 
+			}
+			else
+			{
+			alert("tidak bisa menjumlahkan");
+			}
+			
+		}
+		function kali(){
+		 var a = parseFloat(document.getElementById('a').value);
+         var b = parseFloat(document.getElementById('b').value);
+		 var c = parseFloat(document.getElementById('c').value);
+		 var d = document.getElementById('a1');
+		 var e = document.getElementById('b1');
+		 var f = document.getElementById('c1');
+		 
+		 
+			if(d.checked === true && e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a*b*c;
+		 
+			}
+			else if(d.checked === true && e.checked)
+			{
+		 
+			document.getElementById('hasil').value = a*b;
+		 
+			}
+			else if(d.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = a*c;
+		 
+			}
+			else if(e.checked === true && f.checked === true)
+			{
+		 
+			document.getElementById('hasil').value = b*c;
+		 
+			}
+			else
+			{
+			alert("tidak bisa menjumlahkan");
+			}
+			
+		}
+	</script>
+	</head>
+
+  <input type="checkbox" id="a1" name="a1" value="">
+  <input type="text" for="a1" id="a" onkeypress="return hanyaAngka(event)" value="0" name="a">
+  <p> </p>
+  <input type="checkbox" id="b1" name="b1" value="">
+  <input type="text" for="b1" id="b" onkeypress="return hanyaAngka(event)" value="0" name="b">
+  <p> </p>
+  <input type="checkbox" id="c1" name="c1" value="">
+  <input type="text" for="c1" id="c" onkeypress="return hanyaAngka(event)"  value="0" name="c">
+  <p> </p>
+  <input type="submit" value="+" style="width:30px;" name="tambah" onClick="tambah();">
+  <input type="submit" value="-" style="width:30px;" name="kurang" onClick="kurang();">
+  <input type="submit" value="/" style="width:30px;" name="bagi" onClick="bagi();">
+  <input type="submit" value="X" style="width:30px;" name="kali" onClick="kali();">
+ 
+  <br>--------------------------------------</br>
+  <p> </p>
+  <label style="padding-right:0px;">Hasil 	: </label> <input type="text" id="hasil" readonly/>
+
+</center>
+</body>
+</html>
